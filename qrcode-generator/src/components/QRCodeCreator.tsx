@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import QRCode from "qrcode";
 import { useToast } from "./ui/use-toast"; // Ensure this path is correct
+import Image from "next/image"; // Import the Image component from the appropriate library
 
 const QRCodeCreator = () => {
   const [input, setInput] = useState<string>("");
@@ -50,7 +51,7 @@ const QRCodeCreator = () => {
         />
         <Button onClick={generate}>Generate</Button>
       </div>
-      {src && <img src={src} alt="Generated QR Code" />}
+      {src && <Image src={src} alt="Generated QR Code" />}
     </div>
   );
 };
